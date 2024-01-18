@@ -42,5 +42,5 @@ module SuperStorage
         end
       end
     end
-  end # module Uploaders
+  end
 end
