@@ -1,6 +1,15 @@
 # frozen_string_literal: true
 
 require "super_storage"
+require "byebug"
+
+def file_path( *paths )
+  File.expand_path(File.join(File.dirname(__FILE__), 'fixtures', *paths))
+end
+
+def test_folder( *paths )
+  File.expand_path(File.join(File.dirname(__FILE__), 'test', *paths))
+end
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

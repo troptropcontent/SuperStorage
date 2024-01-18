@@ -11,6 +11,7 @@ gem "rspec", "~> 3.0"
 
 group :development, :test do
   gem 'tapioca', require: false
+  gem 'byebug'
 end
 
 group :development do
