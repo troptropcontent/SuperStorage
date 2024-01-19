@@ -1,16 +1,12 @@
-name: Ruby
+name: CI
 
 on:
-  push:
-    branches:
-      - main
-
   pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Ruby ${{ matrix.ruby }}
+    name: Rspec
     strategy:
       matrix:
         ruby:
@@ -23,5 +19,5 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
-    - name: Run the default task
-      run: bundle exec rake
+    - name: Run the rspec suit
+      run: bundle exec rspec
