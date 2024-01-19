@@ -14,6 +14,7 @@ GEM
     erubi (1.12.0)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
+    lefthook (1.5.7)
     netrc (0.11.0)
     parallel (1.24.0)
     parser (3.2.2.3)
@@ -92,6 +93,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
+  lefthook (~> 1.5)
   rake (~> 13.0)
   rspec (~> 3.0)
   rubocop

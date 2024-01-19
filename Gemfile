@@ -19,3 +19,5 @@ group :development do
 end
 
 gem 'rubocop', require: false
+
+gem "lefthook", "~> 1.5", require: false
