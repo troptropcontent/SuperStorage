@@ -1,4 +1,4 @@
-name: Ruby
+name: CI
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Ruby ${{ matrix.ruby }}
+    name: Rspec
     strategy:
       matrix:
         ruby:
