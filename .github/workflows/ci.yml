@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Setup Ruby ${{ matrix.ruby }}
+    name: Checks
     strategy:
       matrix:
         ruby:
