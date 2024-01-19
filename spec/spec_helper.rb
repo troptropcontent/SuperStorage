@@ -3,12 +3,12 @@
 require 'super_storage'
 require 'byebug'
 
-def file_path(*paths)
-  File.expand_path(File.join(File.dirname(__FILE__), 'fixtures', *paths))
+def file_path(*)
+  File.expand_path(File.join(File.dirname(__FILE__), 'fixtures', *))
 end
 
-def test_folder(*paths)
-  File.expand_path(File.join(File.dirname(__FILE__), 'test', *paths))
+def test_folder(*)
+  File.expand_path(File.join(File.dirname(__FILE__), 'test', *))
 end
 
 RSpec.configure do |config|

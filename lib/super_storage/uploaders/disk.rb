@@ -1,7 +1,9 @@
 # typed: true
+# frozen_string_literal: true
 
 module SuperStorage
   module Uploaders
+    # This class is responsible for storing files to disk.
     class Disk
       extend T::Sig
       attr_reader :configuration, :root, :path

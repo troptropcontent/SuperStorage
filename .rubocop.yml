@@ -1,0 +1,14 @@
+AllCops:
+  NewCops: enable
+
+Style/StringLiterals:
+  Exclude:
+    - 'Gemfile'
+  
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Layout/LineLength:
+  Exclude:
+    - 'super_storage.gemspec'
