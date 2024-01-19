@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = 'This gem allows you to use a single interface to interact with most of the cloud storage providers.'
   spec.homepage = 'https://github.com/SuperDossier/SuperStorage'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 2.6.0'
+  spec.required_ruby_version = '>= 3.2.1'
 
   spec.metadata['allowed_push_host'] = "TODO: Set to your gem server 'https://example.com'"
 
@@ -38,4 +38,5 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end

@@ -1,0 +1,15 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.2.1
+
+Style/StringLiterals:
+  Exclude:
+    - 'Gemfile'
+  
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Layout/LineLength:
+  Exclude:
+    - 'super_storage.gemspec'

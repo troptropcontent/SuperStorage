@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Rspec
+    name: Checks
     strategy:
       matrix:
         ruby:
@@ -19,5 +19,9 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
-    - name: Run the rspec suit
+    - name: Rspec
       run: bundle exec rspec
+    - name: Sorbet
+      run: bundle exec srb tc
+    - name: Rubocop
+      run: bundle exec rubocop
