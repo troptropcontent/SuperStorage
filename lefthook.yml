@@ -17,5 +17,4 @@ pre-commit:
   commands:
     rubocop:
       tags: backend style
-      glob: "*.rb"
-      run: bundle exec rubocop -a {staged_files}
+      run: bundle exec rubocop -a --force-exclusion {staged_files}
