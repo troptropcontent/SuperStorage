@@ -31,7 +31,7 @@ module SuperStorage
           before { FileUtils.mkdir_p(test_folder) && FileUtils.cp(file_path('test.txt'), test_folder('test.txt')) }
           after { FileUtils.rm_rf(test_folder) }
           it 'returns file' do
-            file = described_class.new(configuration: { path: 'spec/test' }).retrieve!('test.txt')
+            file = described_class.new(configuration: { path: 'spec/test' }).retrieve!('spec/test/test.txt')
             expect(file).to be_a(File)
           end
         end

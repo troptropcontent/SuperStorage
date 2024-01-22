@@ -28,7 +28,7 @@ module SuperStorage
 
       sig { params(identifier: String).returns(File) }
       def retrieve!(identifier)
-        ::File.open(::File.expand_path(identifier, path))
+        ::File.open(::File.expand_path(identifier, root))
       end
     end
   end
