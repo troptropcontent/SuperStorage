@@ -9,14 +9,14 @@ module SuperStorage
         let(:test_file_path) { file_path('test.txt') }
         after { FileUtils.rm_rf(test_folder) }
         context 'when file is a File' do
-          let(:file) { File.open(test_file_path) }
+          let(:file) { UploadedFile.new(file_name: 'test.txt', file: File.open(test_file_path)) }
           it 'stores file to disk' do
             described_class.new(configuration: { path: 'spec/test' }).store!(file)
             expect(File).to exist('spec/test/test.txt')
           end
         end
         context 'when file is a String' do
-          let(:file) { test_file_path }
+          let(:file) { UploadedFile.new(file_name: 'test.txt', file: test_file_path) }
           it 'stores file to disk' do
             described_class.new(configuration: { path: 'spec/test' }).store!(file)
             expect(File).to exist('spec/test/test.txt')

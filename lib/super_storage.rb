@@ -3,6 +3,7 @@
 
 require 'sorbet-runtime'
 require_relative 'super_storage/version'
+require_relative 'super_storage/uploaded_file'
 
 # This module is the main entry point of the gem.
 module SuperStorage
