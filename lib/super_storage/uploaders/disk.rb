@@ -15,11 +15,15 @@ module SuperStorage
         @configuration = configuration.except(:root, :path)
       end
 
-      sig { params(file: UploadedFile).void }
+      sig { params(file: UploadedFile).returns(String) }
       def store!(file)
         destination_path = ::File.expand_path(path, root)
         ::FileUtils.mkdir_p(destination_path)
         ::FileUtils.cp(file.file, destination_path)
+
+        file = file.file
+        file_path = file.is_a?(String) ? file : file.path
+        ::File.join(path, File.basename(file_path))
       end
 
       sig { params(identifier: String).returns(File) }
