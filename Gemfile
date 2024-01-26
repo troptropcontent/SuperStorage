@@ -14,6 +14,10 @@ group :development, :test do
   gem 'tapioca', require: false
 end
 
+group :test do
+  gem 'simplecov', require: false, group: :test
+end
+
 group :development do
   gem 'sorbet'
 end
